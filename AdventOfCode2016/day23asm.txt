@@ -1,0 +1,38 @@
+cpy a b  # b = a
+==================== # Laço C até tgl
+	dec b    # b -= 1
+	cpy a d  # d = a
+	cpy 0 a  # a = 0
+	=================== #laço D #d vezes  (a += c*d)
+	cpy b c  # c = b
+		=================== #laço C # a += c
+		inc a    # a += 1  
+		dec c    # c -= 1
+		jnz c -2 # if c != 0: jump -2
+		===================
+	dec d     # d -= 1
+	jnz d -5  # 
+	=======================
+	dec b    # b -= 1
+	cpy b c  # c = b 
+	cpy c d  # d = c
+	=================== #laço D
+	dec d    # d -= 1
+	inc c    # c += 1   #c += d
+	jnz d -2 
+	===================
+	tgl c
+	cpy -16 c
+	jnz 1 c
+===================
+cpy 83 c
+jnz 78 d #d é 0?
+========== Laço C
+	========== Laço d infinito?
+	inc a
+	inc d
+	jnz d -2
+	=============
+	inc c
+	jnz c -5
+============
